@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Freaking Math</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
+    + import file from folder or cdn
+    + *.js file in js folder, *.css file in css folder
+    + using jquery 3.3.1
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/initial.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="top-container">
+      <h2 class="logo">
+        Freaking Math
+      </h2>
+      <p>
+        Current score: <span id="score">0</span>
+      </p>
+      <div class="time-view">
+        <div>Time:</div>
+        <div class="float-left time"></div>
+        <div class="float-left time time-background" id="time"></div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="math big-text">
+        <span class="num1">.</span>
+        <span class="operator">.</span>
+        <span class="num2">.</span>
+        =
+        <span class='result'>.</span>
+      </div>
+      <div class="button-view">
+        <button type='button' class='main-button button-left' value='true'>
+          True
+        </button>
+        <button type='button' class='main-button button-right' value='false'>
+          False
+        </button>
+      </div>
+    </div>
+    <div class="pop-up-container">
+      <div class="pop-up-box">
+        <div class="pop-up-content">
+          <p class="pop-up-title">
+            Let's Play!
+          </p>
+          <button type='button' class='pop-up-button' id='play-button'>
+            Play
+          </button>
+          <button type='button' class='pop-up-button' id='leaderboard-button'>
+            Leaderboard
+          </button>
+        </div>
+        <div class="leaderboard-content">
+          <ul id="leaderboard-table">
+          </ul>
+          <button type='button' class='pop-up-button' id='back-button'>
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
