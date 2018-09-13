@@ -1,12 +1,13 @@
-$(document).ready(function() {
-  // app open
-  initGame()
-})
+if (Constants.ENV === 'DEV') {
+  $(document).ready(function() {
+    // app open
+    initGame()
+  })
+}
 
 function initGame() {
-  $('#score').html('0')
-  $('#time').css('right', '0')
-  randNum()
+  const app = new App()
+  app.init()
 }
 
 $(document).on('click', '.main-button', function() {
