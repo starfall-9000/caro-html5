@@ -7,17 +7,18 @@ class View {
     this.eventHub = new EventHub()
     this.canvas = document.getElementById('goBoard')
     this.ctx = this.canvas.getContext('2d')
+    const cellSize = ($('#goBoard').width() - 0.5) / Constants.SIZE
     this.board = new GoBoard({
       boardBackgroundColor: Constants.BOARD_BACKGROUND_COLOR,
       boardLineColor: Constants.BOARD_LINE_COLOR,
       boardLineWith: Constants.BOARD_LINE_WIDTH,
-      cellSize: Constants.CELL_SIZE,
+      cellSize: cellSize,
       circleStoneColor: Constants.CIRCLE_STONE_COLOR,
       crossStoneColor: Constants.CROSS_STONE_COLOR,
       ctx: this.ctx,
       size: Constants.SIZE,
       stoneLineWidth: Constants.STONE_LINE_WITH,
-      stoneSize: Constants.STONE_SIZE
+      stoneSize: ($('#goBoard').width() - 0.5) / Constants.SIZE - 10
     })
     this.newRoundBtn = document.querySelector('.button.newRound')
     this.undoBtn = document.querySelector('.button.undo')

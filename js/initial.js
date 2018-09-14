@@ -6,8 +6,20 @@ if (Constants.ENV === 'DEV') {
 }
 
 function initGame() {
+  layoutContent()
   const app = new App()
   app.init()
+}
+
+function layoutContent() {
+  const width = $('.container').width()
+  const height = $('.container').height()
+
+  const contentSize = width < height ? width - 20 : height - 300
+  $('.main-container').width(contentSize)
+  $('.main-container').height(contentSize)
+  $('#goBoard').prop('width', contentSize)
+  $('#goBoard').prop('height', contentSize)
 }
 
 $(document).on('click', '.main-button', function() {

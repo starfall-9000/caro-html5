@@ -47,10 +47,10 @@ class Controller {
     const { view, board, playerI, playerII } = this
     const nextPlayer = player === playerI ? playerII : playerI
     board.setCurrentPlayer(nextPlayer)
-    if (Master && nextPlayer instanceof Master) {
-      const move = nextPlayer.think(board.points)
-      nextPlayer.move(move.column, move.row)
-    }
+    // if (nextPlayer instanceof Master) {
+    //   const move = nextPlayer.think(board.points)
+    //   nextPlayer.move(move.column, move.row)
+    // }
   }
 
   handleMoved(point) {
