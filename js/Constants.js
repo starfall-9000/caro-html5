@@ -4,7 +4,7 @@
 
 const Constants = {
   ENV: 'DEV',
-  SIZE: 15,
+  SIZE: 12,
   CELL_SIZE: 38,
   STONE_SIZE: 28,
   STONE_LINE_WITH: 4,
